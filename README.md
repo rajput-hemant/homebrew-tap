@@ -21,16 +21,9 @@ brew install rajput-hemant/tap/<formula>
 
 ## How formulae get here
 
-Every formula is a shop-file in `Formula/<name>.rb`, so this tap holds any number of
-packages - nothing here is tied to one project. Formula files are written by each
-project's release workflow (cargo-dist's Homebrew publisher pushes `Formula/<name>.rb`
-with a token that has write access to this repo), or added by hand in a pull request.
+Every formula is a file in `Formula/<name>.rb`, so this tap holds any number of
+packages and is not tied to one project. Formula files are written by each project's
+release workflow (cargo-dist's Homebrew publisher pushes `Formula/<name>.rb` with a
+token that has write access to this repo), or added by hand in a pull request.
 
 `brew audit --strict --online Formula/<name>.rb` checks a formula before it lands.
-
-## Maintenance
-
-```sh
-brew update
-brew upgrade <formula>
-```
